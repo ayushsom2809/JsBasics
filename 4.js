@@ -109,3 +109,26 @@ console.log(sortedCars); // outputs ['Ford', 'Mercedes', 'Saab', 'Volvo']
 
 const reversedCars = cars.reverse();
 console.log(reversedCars); // outputs ['Volvo', 'Saab', 'Mercedes', 'Ford']     
+
+
+
+
+// BELOW IS THE EXAMPLE OF SOME COMMONLY PERFORMED ACTIONS ON ARRAYS IN JAVASCRIPT
+
+let cars = ['bmw', "honda"];
+console.log(cars.toString()); // converts to string 
+console.log(cars.length); // gives length 2
+cars.length=1; // we can fix the length giving ouptut AS BMW
+console.log(cars) // BMW
+cars.push('honda','ford',['saab']) // push is used to add element to the end of array
+cars.pop() // removes element from the end of array 
+console.log(cars) // bmw , honda , ford
+console.log(cars.at(1)) // same as index[] gives bmw as output
+console.log(cars.join(":")) // same as toString , we can add joining element , gives bmw:honda:ford
+
+console.log(cars.shift());// removes element from the start of array and gives that element as reult = bmw
+console.log(cars) // remaining array which is honda, ford
+console.log(cars.unshift('bmw')); // adds to the start of array and gives the length as output = 3
+console.log(cars) // bmw,honda, ford
+let cars1= ['tata', 'mahindra'];
+console.log(cars.concat(cars1));
