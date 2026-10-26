@@ -1,0 +1,64 @@
+<!-- JS COUNTER -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body>   
+
+<h1>JS PROJECT</h1>
+
+<h2>JS COUNTER</h2>
+
+<p id="count" style="font-size: 20px; font-weight: bold;">0</p>
+
+<button onClick="increaseCount()">+</button>
+<button onClick="decreaseCount()">-</button>
+<button onClick="resetCount()">Reset</button>
+<button onClick="saveCount()">Save</button>
+<button onClick="loadCount()">Load</button>
+
+
+<script>
+
+// intialize count value
+let count = 0;
+
+// function to increase count 
+
+function increaseCount(){
+    count++;
+    document.getElementById("count").innerHTML = count;
+}
+
+
+// function to decrease count
+function decreaseCount(){
+    count--;
+    document.getElementById("count").innerHTML = count;
+}
+
+// function to reset count
+function resetCount(){
+    count = 0;
+    document.getElementById("count").innerHTML = count;
+}
+
+// function to save count to local storage
+function saveCount(){
+    localStorage.setItem("count", count);
+}
+
+// function to load count from local storage
+function loadCount(){
+    let savedCount = localStorage.getItem("count");
+    if(savedCount !== null){
+        count = parseInt(savedCount);
+        document.getElementById("count").innerHTML = count;
+    }
+}
+
+
+
+
+</script>
+</body> 
+</html>
